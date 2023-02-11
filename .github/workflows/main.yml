@@ -12,6 +12,14 @@ jobs:
     
     steps:
       - uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with: 
+          python-version: 3.10.9
       - name: Run make
-        run: make hello
+        run: make install
+      - name: Run make
+        run: make lint
+      - name: Test
+        run: test
     
