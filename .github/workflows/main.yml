@@ -13,5 +13,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run make
-        run: make hello
+        run: make lint
     
